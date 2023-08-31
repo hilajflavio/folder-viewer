@@ -4,7 +4,7 @@ const path = require('path')
 
 const server = http.createServer((req, res) => {
     // Define the directory path you want to read files from
-    const directoryPath = 'C:/Users/Flavio/Desktop/INCOMING_SCANS'
+    const directoryPath = './dir/INCOMING_SCANS'
 
     // Set CORS headers to allow requests from any origin (*)
     res.setHeader('Access-Control-Allow-Origin', '*')
@@ -25,8 +25,36 @@ const server = http.createServer((req, res) => {
             res.writeHead(500, { 'Content-Type': 'application/json' })
             res.end(JSON.stringify({ error: 'Failed to read directory' }))
         } else {
-            res.writeHead(200, { 'Content-Type': 'application/json' })
-            res.end(JSON.stringify({ files }))
+            // Create an array to store file information
+            const fileData = []
+
+            // Loop through the files and get information about each file
+            files.forEach((file) => {
+                const filePath = path.join(directoryPath, file)
+                fs.stat(filePath, (statErr, stats) => {
+                    if (statErr) {
+                        console.error('Error getting file stats:', statErr)
+                    } else {
+                        // Calculate a relative path based on the server's location
+                        const relativePath = `\\node\\${path
+                            .relative(__dirname, filePath)
+                            .replace(/\//g, '\\')}`
+
+                        // Push file information (name and relative path) to the array
+                        fileData.push({
+                            name: file,
+                            path: relativePath,
+                            size: stats.size // Add more file properties as needed
+                        })
+
+                        // If all files have been processed, send the response
+                        if (fileData.length === files.length) {
+                            res.writeHead(200, { 'Content-Type': 'application/json' })
+                            res.end(JSON.stringify({ files: fileData }))
+                        }
+                    }
+                })
+            })
         }
     })
 })

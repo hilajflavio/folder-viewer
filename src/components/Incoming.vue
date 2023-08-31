@@ -2,7 +2,9 @@
     <div>
         <h1>Incoming List</h1>
         <ul>
-            <li v-for="file in files" :key="file">{{ file }}</li>
+            <li v-for="file in files" :key="file.name">
+                <a :href="file.path" target="_blank">{{ file.name }}</a>
+            </li>
         </ul>
     </div>
 </template>
@@ -23,7 +25,7 @@ export default {
     methods: {
         async fetchFiles() {
             try {
-                const response = await axios.get('http://localhost:3000') // Make sure Axios is properly configured in your Vue project
+                const response = await axios.get('http://172.16.203.215:3000') // Make sure Axios is properly configured in your Vue project
                 if (response.status === 200) {
                     this.files = response.data.files
                 } else {
@@ -39,4 +41,10 @@ export default {
 
 <style scoped>
 /* Add your component-specific styles here */
+a {
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
 </style>
