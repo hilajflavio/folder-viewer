@@ -1,0 +1,73 @@
+Machine Translated by Google
+
+1 PURPOSE OF THE WORK
+
+The Polytechnic University of Tirana seeks to modernize critical components of the infrastructure where digital
+
+services are offered by requesting the replacement of the existing firewall devices ASA 5512 which are no longer
+
+produced and will no longer be supported with warranty and development by the manufacturer Cisco with two
+
+new firewalls new generation!
+
+The modernization of the current system of information filtering at the entrance and exit of the network, increases
+
+the security param to contemporary standards through the deployment of new generation firewall equipment as
+
+well as the application of tested and predetermined practices!
+
+Firewalls are essential to the institution because they act as a barrier between the internal network and the
+
+Internet, preventing unauthorized access to its resources and data.
+
+The latest generation firewalls use a set of rules to filter and block traffic that does not meet specified security
+
+criteria, such as incoming traffic from known malicious IP addresses or web pages as well as outgoing traffic to
+
+unapproved or disreputable sites.
+
+Also these devices can segment the network by applying access rights to certain groups of users at different
+
+levels!
+
+Also, these devices can help prevent unauthorized access, data corruption, and cyber attacks, helping to keep
+
+the institution's networks and information secure. For this reason, the need for firewalls is essential as these
+
+devices protect sensitive information, apply enforced policies to internal users in accordance with predetermined
+
+rules to protect the institution's reputation.
+
+The Polytechnic University of Tirana seeks to increase data storage capacities with a new storage which should
+
+offer high processing capacities and meet the growing demands for access to data. The necessity for this
+
+solution comes as a result of the increasing daily tasks and addressing the data storage needs of the institution
+
+in a device which must be able to
+
+handle even more demands at once for the current load and what will be added to it
+
+the future!
+
+First, the data storage solution must offer scalability, allowing for the addition of more capacity in the future as
+
+the institution's data needs grow without having to replace the entire system. This will help the university avoid
+
+disruptions caused by exceeding their current storage capacity.
+
+Second, data storage solutions must offer high availability and reliability. These systems must use redundant
+
+components and advanced data protection techniques to ensure that data is always available and protected,
+
+even in the event of a physical device failure or disaster.
+
+Third, data storage solutions should offer higher performance than traditional storage solutions, ensuring faster
+
+access to data and reducing latency. This is especially important for historical data that is only incremental and
+
+requires real-time access.
+
+Finally, data storage solutions should provide advanced data management capabilities, including deduplication,
+
+compression, and encryption, which help the university to

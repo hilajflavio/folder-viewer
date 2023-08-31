@@ -18,19 +18,19 @@ import Assesment from '../components/Assesment.vue'
 import Incoming from '../components/Incoming.vue'
 
 export default defineComponent({
-    components: { Assesment, Incoming }
+    components: { Assesment, Incoming },
 
-    // mounted() {
-    //     // Call the refreshPage function every 10 seconds
-    //     setInterval(this.refreshPage, 10000)
-    // },
+     mounted() {
+         // Call the refreshPage function every 10 seconds
+         setInterval(this.refreshPage, 10000)
+     },
 
-    // methods: {
-    //     refreshPage() {
-    //         // Use location.reload() to refresh the page
-    //         location.reload()
-    //     }
-    // }
+     methods: {
+         refreshPage() {
+             // Use location.reload() to refresh the page
+             location.reload()
+         }
+     }
 })
 </script>
 

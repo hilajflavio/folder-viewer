@@ -2,7 +2,7 @@
     <div>
         <h1>Incoming List</h1>
         <ul>
-            <li v-for="file in files" :key="file.name">
+            <li v-for="file in files" :key="file.name" class="pb-2">
                 <a :href="file.path" target="_blank">{{ file.name }}</a>
             </li>
         </ul>
