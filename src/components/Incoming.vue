@@ -25,7 +25,7 @@ export default {
     methods: {
         async fetchFiles() {
             try {
-                const response = await axios.get('http://172.16.203.215:3000') // Make sure Axios is properly configured in your Vue project
+                const response = await axios.get('http://172.16.203.250:3000') // Make sure Axios is properly configured in your Vue project
                 if (response.status === 200) {
                     this.files = response.data.files
                 } else {
